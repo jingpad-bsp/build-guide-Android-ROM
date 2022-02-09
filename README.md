@@ -55,12 +55,12 @@ cd vendor/sprd/release/IDH/Script/
 
 ./build_pac.sh -a ud710_3h10u_native-userdebug-native -b build 2>&1 | tee build.log
 
-./build_pac.sh -a ud710_3h10_native-userdebug-native -b pac 2>&1 | tee build.log
+./build_pac.sh -a ud710_3h10u_native-userdebug-native -b pac 2>&1 | tee build.log
 ```
 ### Scenario 2
 If you want to completely compile and package .pac file without out directory just running only one command, just do:
 ```
 cd vendor/sprd/release/IDH/Script/
 
-./build_pac.sh -a ud710_3h10_native-userdebug-native -b all 2>&1 | tee build.log
+./build_pac.sh -a ud710_3h10u_native-userdebug-native -b all 2>&1 | tee build.log
 ```
