@@ -44,6 +44,11 @@ Then, install this python module:
 sudo pip install pycryptodome
 sudo pip3 install pycryptodome
 ```
+and
+```
+sudo pip install pycrypto
+sudo pip3 install pycrypto
+```
 
 **Compiling**
 -------------
