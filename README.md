@@ -22,9 +22,11 @@ If you just have 16 GB of RAM, **don't run Ubuntu VM on Windows**, otherwise it 
 **Package bring-up**
 --------------------
 
-You must use Ubuntu 18.04 LTS.
+Ubuntu 18.04 LTS or 20.04 LTS are currently supported
 
 First of all, install these dependencies using apt and aptitude:
+
+18.04
 
 ```
 sudo apt-get update
@@ -36,18 +38,34 @@ sudo apt-get install aptitude -y
 sudo aptitude install bc bison build-essential ccache curl flex g++-multilib gcc-multilib gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
 
 sudo aptitude install -y openjdk-8-jdk
-```
 
-Then, install this python module:
-
-```
 sudo pip install pycryptodome
 sudo pip3 install pycryptodome
 ```
-and
+
+20.04
+
 ```
-sudo pip install pycrypto
-sudo pip3 install pycrypto
+sudo add-apt-repository universe
+
+sudo apt-get update
+
+sudo apt-get install fakeroot dpkg-dev libcurl4-openssl-dev python2 python3 repo python3-pip
+
+sudo apt-get install aptitude -y
+
+sudo aptitude install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+
+sudo aptitude install -y openjdk-8-jdk
+
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py
+
+sudo python2 get-pip.py
+
+rm -f get-pip.py
+
+sudo pip2 install pycryptodome
+sudo pip3 install pycryptodome
 ```
 
 **Compiling**
